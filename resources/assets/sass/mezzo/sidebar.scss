@@ -59,6 +59,10 @@
       position: relative;
     }
 
+    > a:hover{
+      background-color: rgba(0,0,0,0.1);
+    }
+
     i {
       padding: 10px;
       margin-right: 10px;
