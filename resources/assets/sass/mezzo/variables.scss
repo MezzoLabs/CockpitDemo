@@ -1,0 +1,28 @@
+$font-family-roboto:  'Roboto', sans-serif !default;
+$font-family-base: $font-family-roboto;
+
+
+$brand-primary:     #fb503b;
+$brand-success:     #46c37b;
+$mezzo-gray-dark:   #191b1f;
+$mezzo-gray:        #2a2e35;
+$mezzo-gray-light:  #34373d;
+
+$mezzo-font-color:        #555555;
+$mezzo-font-color-light:  #aaaaaa;
+
+$mezzo-borders-normal:    1px solid #cacccd;
+$mezzo-borders-light:     1px solid #efefef;
+
+$mezzo-lightgray:             #999999;
+$mezzo-lightgray-dark:        darken($mezzo-lightgray, 20%);
+$mezzo-lightgray-light:       lighten($mezzo-lightgray, 20%);
+
+
+$mezzo-white-paper:   #e4e7e8;
+$mezzo-white:         #ffffff;
+
+$sidebar-width: 235px;
+$sidebar-z-index: 100;
+
+$topbar-height: 60px;
