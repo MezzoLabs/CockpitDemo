@@ -1,0 +1,21 @@
+html, body {
+  height: 100%;
+}
+
+#page-container {
+  padding-left: $sidebar-width;
+}
+
+#view-main {
+  height: 100vh;
+  background-color: $mezzo-white-paper;
+}
+
+a {
+  transition: ease all 0.2s;
+}
+
+#topbar {
+  min-height: $topbar-height;
+  background-color: $mezzo-white;
+}

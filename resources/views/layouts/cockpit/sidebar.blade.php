@@ -5,13 +5,48 @@
                 <div class="sidebar-header sidebar-padding"></div>
                 <div class="sidebar-content sidebar-padding">
                     <ul class="nav-main">
+
+                        <li class="has-pages opened">
+                            <a href="#">
+                                <i class="fa fa-file-o"></i>
+                                <span>Pages</span>
+                            </a>
+                            <ul>
+                                <li><a href="#"><span>List</span></a></li>
+                                <li><a href="#"><span>Add New</span></a></li>
+                                <li><a href="#"><span>Categories</span></a></li>
+                            </ul>
+                        </li>
                         <li>
                             <a href="#">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>Shop</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-camera"></i>
+                                <span>Gallery</span>
+                            </a>
+                        </li>
+                        <li>
+                    </ul>
+                    <h3>Administration</h3>
+                    <ul class="nav-main">
+                       <li>
+                            <a href="#">
                                 <i class="fa fa-users"></i>
-                                <span>Pages</span>
+                                <span>Users</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-files-o"></i>
+                                <span>Files</span>
                             </a>
                         </li>
                     </ul>
+
                 </div>
             </div>
         </div>

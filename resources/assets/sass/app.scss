@@ -3,57 +3,5 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "node_modules/font-awesome/scss/font-awesome.scss";
 
-
-html, body{
-  height: 100%;
-}
-
-#page-container{
-  padding-left: $sidebar-width;
-}
-
-#view-main{
-  height: 100vh;
-  background-color: $mezzo-white-paper;
-}
-
-
-
-#sidebar{
-  width: $sidebar-width;
-  left: 0;
-  top: 0;
-  position: fixed;
-  z-index: $sidebar-z-index;
-  height: 100vh;
-  background-color: $mezzo-gray;
-
-  .sidebar-header{
-    height: $topbar-height;
-    background-color: $mezzo-gray-dark;
-  }
-
-  a{
-    color: $mezzo-lightgray;
-    display: block;
-  }
-
-  a:hover{
-    color: $mezzo-lightgray-light;
-    text-decoration: none;
-  }
-}
-
-
-#topbar{
-  min-height: $topbar-height;
-  background-color: $mezzo-white;
-}
-
-.nav-mainl{
-  @include layout-list();
-}
-
-.nav-main > li {
-  padding: 10px;
-}
+@import "mezzo/general";
+@import "mezzo/sidebar";

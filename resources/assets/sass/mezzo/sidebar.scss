@@ -1,0 +1,96 @@
+#sidebar {
+  width: $sidebar-width;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: $sidebar-z-index;
+  height: 100vh;
+  background-color: $mezzo-gray;
+
+  .sidebar-header {
+    height: $topbar-height;
+    background-color: $mezzo-gray-dark;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    color: $mezzo-lightgray;
+    font-weight: normal;
+    font-size: 14px;
+    margin-bottom: 0px;
+    padding: 0px $sidebar-padding;
+  }
+}
+
+
+
+.nav-main {
+  @include layout-list();
+
+  a {
+    color: $mezzo-lightgray;
+    display: block;
+  }
+
+  a:hover {
+    color: $mezzo-lightgray-light;
+    text-decoration: none;
+  }
+
+  // First Level
+  > li {
+    > a {
+      padding: $sidebar-padding;
+      position: relative;
+    }
+
+    i {
+      padding: 10px;
+      margin-right: 10px;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  > li.has-pages > a:before {
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    right: 15px;
+    display: inline-block;
+    font-family: 'FontAwesome';
+    color: $mezzo-lightgray;
+    content: "\f104";
+    transition: ease all $mezzo-animation-normal;
+  }
+
+  > li.has-pages.opened > a:before {
+    color: $mezzo-white;
+    @include prefix(transform, rotate(-90deg), webkit ms);
+  }
+
+  // Other Levels
+  li ul {
+    @include layout-list();
+    padding-right: 20px;
+    overflow: hidden;
+    background-color: $mezzo-gray-dark;
+    transition: ease all $mezzo-animation-normal;
+    max-height: 0px;
+
+    a {
+      padding: 3px 3px 3px 59px;
+    }
+
+    li:first-child a{
+      padding-top: 10px;
+    }
+
+    li:last-child a{
+      padding-bottom: 10px;
+    }
+  }
+
+  li.opened ul {
+    max-height: 500px;
+  }
+}
