@@ -10,6 +10,21 @@
   .sidebar-header {
     height: $topbar-height;
     background-color: $mezzo-gray-dark;
+    padding: $sidebar-padding;
+
+    span {
+      color: $mezzo-white;
+      font-size: 20px;
+      font-weight: 300;
+      text-transform: uppercase;
+      display: block;
+
+      //@TODO: Put this in a row?
+    }
+
+    i {
+      color: $mezzo-lightgray;
+    }
   }
 
   h3 {

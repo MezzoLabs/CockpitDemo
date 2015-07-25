@@ -2,7 +2,11 @@
     <div class="sidebar-inner">
         <div id="sidebar-scroll">
             <div class="sidebar-content">
-                <div class="sidebar-header sidebar-padding"></div>
+                <div class="sidebar-header">
+                    <img src="/img/mezzo/logo_sidebar.png" />
+                    <span>Mezzo</span>
+                    <i class="pin-sidebar fa fa-dot-circle-o"></i>
+                </div>
                 <div class="sidebar-content sidebar-padding">
                     <ul class="nav-main">
 
