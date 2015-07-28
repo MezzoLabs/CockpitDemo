@@ -3,3 +3,6 @@
 Homestead.yaml
 .env
 .idea
+/bower_components
+npm-debug.log
+/public/bower

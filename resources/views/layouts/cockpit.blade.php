@@ -5,6 +5,7 @@
 
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,400italic' rel='stylesheet' type='text/css'>
         <link href="/css/app.css" rel='stylesheet' type="text/css" >
+        <script src="/js/bundle.js" type="text/javascript"></script>
 
     </head>
     <body>

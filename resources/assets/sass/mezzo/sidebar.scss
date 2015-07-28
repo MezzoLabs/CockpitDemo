@@ -12,7 +12,16 @@
     background-color: $mezzo-gray-dark;
     padding: $sidebar-padding;
 
-    span {
+    .sidebar-logo-wrap{
+      margin-right: 10px;
+      margin-left: 5px;
+    }
+
+    .sidebar-pin-wrap{
+      line-height: 29px;
+    }
+    
+    b {
       color: $mezzo-white;
       font-size: 20px;
       font-weight: 300;
@@ -24,6 +33,10 @@
 
     i {
       color: $mezzo-lightgray;
+    }
+    
+    > div:last-child{
+      margin-right: 3px;
     }
   }
 
