@@ -7,6 +7,8 @@
   height: 100vh;
   background-color: $mezzo-gray;
 
+  transition: ease width $mezzo-animation-long;
+
   .sidebar-header {
     height: $topbar-height;
     background-color: $mezzo-gray-dark;
@@ -48,8 +50,28 @@
     margin-bottom: 0px;
     padding: 0px $sidebar-padding;
   }
+
+  .sidebar-pin-wrap{
+    float: right;
+    text-align: center;
+    padding: 5px 0px;
+    cursor: pointer;
+  }
 }
 
+
+.sidebar-closed #sidebar{
+  width: $sidebar-closed-width;
+
+  .sidebar-logotext-wrap, .nav-main > li.has-pages.opened > a:before,
+  .nav-main span, h3, .nav-main li ul{
+    display: none;
+  }
+
+  .sidebar-pin-wrap{
+    float: none;
+  }
+}
 
 
 .nav-main {
@@ -126,3 +148,4 @@
     max-height: 500px;
   }
 }
+

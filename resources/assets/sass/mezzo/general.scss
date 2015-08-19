@@ -2,8 +2,17 @@ html, body {
   height: 100%;
 }
 
-#page-container {
+#page-container{
+  transition: ease padding $mezzo-animation-long;
+
+}
+
+.sidebar-open #page-container {
   padding-left: $sidebar-width;
+}
+
+.sidebar-closed #page-container {
+  padding-left: $sidebar-closed-width;
 }
 
 #view-main {
@@ -19,3 +28,5 @@ a {
   min-height: $topbar-height;
   background-color: $mezzo-white;
 }
+
+

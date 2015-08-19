@@ -5,7 +5,7 @@
                 <div class="sidebar-header clearfix">
                     <div class="pull-left sidebar-logo-wrap"><img src="/img/mezzo/logo_sidebar.png" /></div>
                     <div class="pull-left sidebar-logotext-wrap"><b>Mezzo</b></div>
-                    <div class="pull-right sidebar-pin-wrap"><i class="sidebar-pin fa fa-dot-circle-o"></i></div>
+                    <div class="sidebar-pin-wrap"><i class="sidebar-pin fa fa-dot-circle-o"></i></div>
                 </div>
                 <div class="sidebar-content sidebar-padding">
                     <ul class="nav-main">
