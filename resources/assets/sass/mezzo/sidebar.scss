@@ -60,7 +60,7 @@
 }
 
 
-.sidebar-closed #sidebar{
+.sidebar-unpinned.sidebar-mouseout #sidebar{
   width: $sidebar-closed-width;
 
   .sidebar-logotext-wrap, .nav-main > li.has-pages.opened > a:before,
@@ -105,19 +105,29 @@
     }
   }
 
-  > li.has-pages > a:before {
+  .dropdown {
     position: absolute;
     top: 50%;
-    margin-top: -10px;
+    margin-top: -15px;
     right: 15px;
+    padding: 5px;
     display: inline-block;
-    font-family: 'FontAwesome';
     color: $mezzo-lightgray;
-    content: "\f104";
+
+
     transition: ease all $mezzo-animation-normal;
   }
 
-  > li.has-pages.opened > a:before {
+  .dropdown:hover{
+    color: $mezzo-white;
+  }
+
+  .dropdown:before{
+    font-family: 'FontAwesome';
+    content: "\f104";
+  }
+
+  > li.has-pages.opened > a > .dropdown {
     color: $mezzo-white;
     @include prefix(transform, rotate(-90deg), webkit ms);
   }

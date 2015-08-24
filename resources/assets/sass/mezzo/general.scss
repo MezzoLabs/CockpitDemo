@@ -1,5 +1,10 @@
 html, body {
   height: 100%;
+  color: $mezzo-font-color;
+}
+
+a:active{
+  text-decoration: none;
 }
 
 #page-container{
@@ -7,11 +12,11 @@ html, body {
 
 }
 
-.sidebar-open #page-container {
+.sidebar-pinned #page-container {
   padding-left: $sidebar-width;
 }
 
-.sidebar-closed #page-container {
+.sidebar-unpinned.sidebar-mouseout #page-container {
   padding-left: $sidebar-closed-width;
 }
 
@@ -24,9 +29,28 @@ a {
   transition: ease all 0.2s;
 }
 
-#topbar {
-  min-height: $topbar-height;
-  background-color: $mezzo-white;
+.light-icon{
+  color: $mezzo-font-color-light;
+  transition: ease color $mezzo-animation-short;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.light-icon.highlight{
+  transition: ease box-shadow $mezzo-animation-long;
+  background-color: #EEE;
+  border-radius: 50px;
+  color: $mezzo-font-color;
+}
+
+.light-icon.highlight:hover{
+  color: $mezzo-font-color-dark;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+
+}
+
+.light-icon:hover{
+  color: $mezzo-font-color;
 }
 
 

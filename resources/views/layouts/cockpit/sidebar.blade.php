@@ -14,6 +14,7 @@
                             <a href="#">
                                 <i class="fa fa-file-o"></i>
                                 <span>Pages</span>
+                                <span class="dropdown"></span>
                             </a>
                             <ul>
                                 <li><a href="#"><span>List</span></a></li>
