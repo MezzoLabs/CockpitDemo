@@ -7,7 +7,7 @@
   height: 100vh;
   background-color: $mezzo-gray;
 
-  transition: ease width $mezzo-animation-long;
+
 
   .sidebar-header {
     height: $topbar-height;
@@ -25,8 +25,8 @@
     
     b {
       color: $mezzo-white;
-      font-size: 20px;
-      font-weight: 300;
+      font-size: 22px;
+      font-weight: 400;
       text-transform: uppercase;
       display: block;
 
@@ -54,18 +54,24 @@
   .sidebar-pin-wrap{
     float: right;
     text-align: center;
-    padding: 5px 0px;
+    padding-top: 1px;
     cursor: pointer;
   }
 }
 
 
 .sidebar-unpinned.sidebar-mouseout #sidebar{
+  transition: ease width $mezzo-animation-long;
+
   width: $sidebar-closed-width;
 
   .sidebar-logotext-wrap, .nav-main > li.has-pages.opened > a:before,
-  .nav-main span, h3, .nav-main li ul{
+  .nav-main span, .nav-main li ul, .sidebar-pin-wrap{
     display: none;
+  }
+  
+  h3{
+    opacity: 0;
   }
 
   .sidebar-pin-wrap{
@@ -90,8 +96,18 @@
   // First Level
   > li {
     > a {
+      @extend .clearfix;
       padding: $sidebar-padding;
       position: relative;
+
+      > span, > i{
+        @extend .pull-left;
+      }
+
+      > span {
+        margin-top: 5px;
+        margin-left: 10px;
+      }
     }
 
     > a:hover{
@@ -99,10 +115,16 @@
     }
 
     i {
-      padding: 10px;
-      margin-right: 10px;
+      padding-top: 3px;
+      text-align: center;
       background-color: rgba(0, 0, 0, 0.3);
+      width: 32px;
+      height: 32px;
+      display: inline-block;
+      font-size: 19px;
     }
+
+
   }
 
   .dropdown {

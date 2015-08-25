@@ -1,4 +1,17 @@
-#content-container .content {
+#content-container{
+  position: relative;
+  padding-top: $topbar-height;
+  min-height: 100%;
+}
+
+#content-main{
+
+}
+
+#content-main > .content{
+  min-height: calc(100vh - #{$topbar-height + $footer-height});
+  padding-bottom: $content-padding;
+  background-color: $mezzo-white-paper;
 
   .wrapper {
     padding: 0px $content-padding;
@@ -11,7 +24,9 @@
 
 .panel {
 
+  border-radius: 0px;
   border-width: 0;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.05);
 
   .panel-body {
     padding: 30px 30px;
@@ -29,8 +44,8 @@
     h3 {
       display: block;
       padding: 20px 30px;
-      font-size: 18px;
-      font-weight: 400;
+      font-size: 16px;
+      font-weight: 500;
       text-transform: uppercase;
       margin-top: 0px;
       margin-bottom: 0px;
@@ -58,10 +73,36 @@
     border-radius: 0px;
     margin-top: -1px;
     padding-right: 50px;
+    margin-bottom: 0px;
   }
 
 }
 
+#content-main > .content :last-child{
+  margin-bottom: 0px !important;
+}
+
 .panel-bordered > .panel-heading {
   border-bottom: 1px solid #E4EAEC;
+}
+
+
+
+#content-aside{
+  position: absolute;
+  top: $topbar-height;
+  bottom: 0;
+  left: 0px;
+  width: $content-aside-width;
+  overflow-y: auto;
+  background: $mezzo-gray-light;
+  color: $mezzo-lightgray;
+}
+
+#content-aside+#content-main {
+  margin-left: $content-aside-width;
+}
+
+#view-overlay{
+  @include overlay;
 }

@@ -22,6 +22,9 @@ jQuery( document ).ready(function( $ ) {
 
     $('#sidebar').mouseleave(function(){
         $('body').addClass('sidebar-mouseout').removeClass('sidebar-mousein');
+
+        if($('body').hasClass('sidebar-unpinned'))
+            $('.nav-main .opened').removeClass('opened');
     });
 
     $('.nav-main > li.has-pages > a .dropdown').click(function(){

@@ -12,7 +12,7 @@
 
                         <li class="has-pages opened">
                             <a href="#">
-                                <i class="fa fa-file-o"></i>
+                                <i class="ion-ios-copy"></i>
                                 <span>Pages</span>
                                 <span class="dropdown"></span>
                             </a>
@@ -24,13 +24,13 @@
                         </li>
                         <li>
                             <a href="#">
-                                <i class="fa fa-shopping-cart"></i>
+                                <i class="ion-pricetags"></i>
                                 <span>Shop</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <i class="fa fa-camera"></i>
+                                <i class="ion-easel"></i>
                                 <span>Gallery</span>
                             </a>
                         </li>
@@ -40,13 +40,13 @@
                     <ul class="nav-main">
                        <li>
                             <a href="#">
-                                <i class="fa fa-users"></i>
+                                <i class="ion-person-stalker"></i>
                                 <span>Users</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <i class="fa fa-files-o"></i>
+                                <i class="ion-ios-folder"></i>
                                 <span>Files</span>
                             </a>
                         </li>

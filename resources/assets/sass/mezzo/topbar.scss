@@ -1,6 +1,11 @@
 #topbar {
-  min-height: $topbar-height;
+  height: $topbar-height;
   background-color: $mezzo-white;
+
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0;
 
   .toolbox {
     @include layout-list();

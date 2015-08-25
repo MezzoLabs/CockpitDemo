@@ -1,6 +1,18 @@
 html, body {
-  height: 100%;
   color: $mezzo-font-color;
+  background-color: $mezzo-white-paper;
+}
+
+h1, h2, h3{
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+h3{
+  font-size: 16px;
+}
+html, body, #page-container, #view-main{
+  height: 100%;
 }
 
 a:active{
@@ -16,12 +28,12 @@ a:active{
   padding-left: $sidebar-width;
 }
 
-.sidebar-unpinned.sidebar-mouseout #page-container {
+.sidebar-unpinned #page-container {
   padding-left: $sidebar-closed-width;
 }
 
 #view-main {
-  height: 100vh;
+  position: relative;
   background-color: $mezzo-white-paper;
 }
 
