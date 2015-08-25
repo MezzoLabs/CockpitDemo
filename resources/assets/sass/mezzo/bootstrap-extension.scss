@@ -7,3 +7,23 @@
 .btn-xs{
   padding: 1px 5px;
 }
+
+.form-control:focus {
+  outline: 0 none;
+  border-color: #aaaaaa;
+  box-shadow: none;
+}
+
+label{
+  font-weight: 500;
+}
+
+.has-error label{
+  color: $brand-danger;
+}
+
+.has-success label{
+  color: $brand-success;
+}
+
+textarea { resize:vertical; }

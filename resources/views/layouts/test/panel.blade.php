@@ -26,5 +26,42 @@
                   <input type="submit" class="btn btn-default" />
                   <input type="submit" class="btn" />
 
+                  <br/>
+                  <br/>
+
+
+                    <div class="form-group">
+                    <label>Name</label>
+                                      <input type="text" class="form-control" />
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col-md-6">
+                        <div class="form-group">
+                                            <label>Name</label>
+                                                              <input type="text" class="form-control" />
+                                            </div>
+                        </div>
+                        <div class="col-md-6">
+                        <div class="form-group has-error">
+                                <label>Alter</label>
+                              <input type="text" class="form-control" />
+
+                              <div class="help-block">
+                                Nobody can be that old
+                              </div>
+                            </div>
+                        </div>
+
+                         <div class="col-md-6">
+                            <div class="form-group has-success">
+                            <label>Beschreibung</label>
+                                                  <textarea type="text" class="form-control" ></textarea>
+                                </div>
+                            </div>
+                    </div>
+
                 </div>
               </div>
