@@ -32,4 +32,33 @@ jQuery( document ).ready(function( $ ) {
         console.log(this);
     });
 
+    $('.trigger-quickview').click(function(){
+        quickviewVisible(!quickviewIsVisible());
+        return false;
+    });
+
+    $('#quickview .btn-close').click(function(){
+        quickviewVisible(false);
+    });
+
+    $('#content-main, #view-overlay').click(function(){
+        quickviewVisible(false);
+
+    });
+
+    function quickviewIsVisible(){
+        return  $('#quickview').hasClass('opened');
+    }
+
+    function quickviewVisible(open){
+        console.log(open);
+        if(open){
+            $('#quickview').addClass('opened');
+            $('#view-overlay').addClass('opened');
+        } else {
+            $('#quickview').removeClass('opened')
+            $('#view-overlay').removeClass('opened')
+        }
+    }
+
 });

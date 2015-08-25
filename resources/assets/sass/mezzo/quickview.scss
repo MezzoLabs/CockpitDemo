@@ -8,6 +8,7 @@
   z-index: 1000;
   box-shadow: 0 0 9px rgba(0, 0, 0, 0.2);
 
+
   transition: ease right $mezzo-animation-normal;
   //margin-top: $topbar-height;
   z-index: 500;
@@ -17,13 +18,27 @@
   }
 
   .quickview-heading{
+    @extend .clearfix;
+
+    min-height: 45px;
+
     padding: 15px;
+    padding-bottom: 0px;
     background-color: $brand-primary;
     color: $mezzo-white;
 
     h3{
+      @extend .pull-left;
       @include layout-heading;
       font-weight: 300;
     }
+
+    .btn{
+      margin-top: -7px;
+      @include layout-button;
+      @extend .pull-right;
+    }
   }
+
+
 }

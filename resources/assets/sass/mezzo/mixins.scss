@@ -27,6 +27,12 @@
   }
 }
 
+@mixin layout-button{
+  padding: 5px 10px;
+  min-width: 50px;
+  border: none;
+}
+
 
 @mixin prefix($property, $value, $vendors: webkit moz ms o) {
   @if $vendors {
@@ -36,3 +42,5 @@
   }
   #{$property}: #{$value};
 }
+
+

@@ -1,5 +1,5 @@
 $font-family-roboto:  'Roboto', sans-serif !default;
-$font-family-base: $font-family-roboto;
+
 
 
 $brand-primary:     #fb503b;
@@ -38,3 +38,16 @@ $content-padding: 30px;
 $content-aside-width: 260px;
 $quickview-width: 285px;
 $footer-height: 50px;
+
+$font-family-base: $font-family-roboto;
+
+/******* BOOTSTRAP **********/
+
+$btn-primary-border: transparent;
+$btn-success-border: transparent;
+$btn-info-border: transparent;
+$btn-warning-border: transparent;
+$btn-danger-border: transparent;
+
+$brand-success: #46C47B;
+$border-radius-base: 2px;

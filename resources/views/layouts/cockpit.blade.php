@@ -18,14 +18,9 @@
             <div id="view-main">
                 @include('layouts.cockpit.topbar')
                 @include('layouts.cockpit.content')
+                @include('layouts.cockpit.quickview')
 
-                <!-- <div id="view-overlay" class="opened"></div> -->
-                <div id="quickview" class="">
-                    <div class="quickview-heading">
-                        <h3>Quickview</h3>
-                    </div>
 
-                </div>
             </div>
         </div>
     </body>

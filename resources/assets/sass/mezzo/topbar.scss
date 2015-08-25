@@ -1,11 +1,14 @@
 #topbar {
   height: $topbar-height;
   background-color: $mezzo-white;
+  transition: ease padding $mezzo-animation-long;
 
   position: fixed;
   z-index: 10;
   width: 100%;
   top: 0;
+  left: 0;
+  padding-left: $sidebar-width;
 
   .toolbox {
     @include layout-list();
@@ -33,4 +36,8 @@
   .toolbox-left{
     @extend .pull-left;
   }
+}
+
+.sidebar-unpinned #topbar{
+  padding-left: $sidebar-closed-width;
 }
