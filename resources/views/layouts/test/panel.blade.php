@@ -18,6 +18,29 @@
 
                   <h4>Body Heading</h4>
 
+                  <p>
+                                          <label>User</label>
+
+                    <a href="#" class="editable" id="username" data-type="text" data-title="Enter username">superuser</a>
+                  </p>
+                  <p>
+                        <label>Description</label>
+                      <a href="#" class="editable" id="description" data-type="textarea" data-title="Enter description">description</a>
+                    </p>
+
+                    <p>
+                    <div class="form-group">
+                            <label>Select a metropolis</label>
+                            <select class="form-control" multiple="multiple">
+                              <option value="AC">Achern</option>
+                              <option value="SW">Sasbachwalden</option>
+                              <option value="SS">Schifferstadt</option>
+                              <option value="NY">New York</option>
+                            </select>
+                        </div>
+                    </p>
+
+
                   <input type="submit" class="btn btn-primary" />
                   <input type="submit" class="btn btn-success" />
                   <input type="submit" class="btn btn-danger" />
@@ -31,8 +54,8 @@
 
 
                     <div class="form-group">
-                    <label>Name</label>
-                                      <input type="text" class="form-control" />
+                        <label>Name</label>
+                        <input type="text" class="form-control" />
                     </div>
 
 

@@ -51,7 +51,6 @@ jQuery( document ).ready(function( $ ) {
     }
 
     function quickviewVisible(open){
-        console.log(open);
         if(open){
             $('#quickview').addClass('opened');
             $('#view-overlay').addClass('opened');
@@ -60,5 +59,23 @@ jQuery( document ).ready(function( $ ) {
             $('#view-overlay').removeClass('opened')
         }
     }
+
+    /**
+     * Form stuff
+     */
+    $.fn.editable.defaults.mode = 'inline';
+
+    $.fn.editableform.buttons =
+        '<button type="submit" class="btn btn-primary btn-sm editable-submit">'+
+        '<i class=ion-checkmark></i>'+
+        '</button>'+
+        '<button type="button" class="btn btn-default btn-sm editable-cancel">'+
+        '<i class="ion-close"></i>'+
+        '</button>';
+
+    $('.editable').editable();
+
+
+    $('select').select2();
 
 });

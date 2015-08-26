@@ -16,8 +16,9 @@ $mezzo-borders-normal:    1px solid #cacccd;
 $mezzo-borders-light:     1px solid #efefef;
 
 $mezzo-lightgray:             #999999;
-$mezzo-lightgray-dark:        darken($mezzo-lightgray, 20%);
-$mezzo-lightgray-light:       lighten($mezzo-lightgray, 20%);
+$mezzo-lightgray-dark:        #777777;
+$mezzo-lightgray-light:       #CCCCCC;
+$mezzo-lightgray-lighter:     #EEEEEE;
 
 $mezzo-animation-short: 0.15s;
 $mezzo-animation-normal: 0.25s;
@@ -42,7 +43,6 @@ $footer-height: 50px;
 $font-family-base: $font-family-roboto;
 
 /******* BOOTSTRAP **********/
-
 $btn-primary-border: transparent;
 $btn-success-border: transparent;
 $btn-info-border: transparent;
@@ -52,3 +52,6 @@ $btn-danger-border: transparent;
 $brand-success: #46C47B;
 $border-radius-base: 2px;
 $top-shadow: 1px 0px 5px rgba(0,0,0,0.2);
+
+
+
