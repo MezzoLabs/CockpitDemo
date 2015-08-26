@@ -7,8 +7,27 @@
     <div class="content">
 
         <div class="wrapper">
-           @include("layouts/test/panel")
+            <div class="row">
+                <div class="col-md-6">
+                  @include("layouts/test/panel")
+                </div>
+                <div class="col-md-6">
+                    @include("layouts/test/panel")
+                </div>
+                <div class="col-md-12">
+                    @include("layouts/test/panel")
+                </div>
+
+
+
+            </div>
+
         </div>
+
+        <div class="wrapper">
+        </div>
+
+
 
 
         <div class="wrapper">

@@ -105,4 +105,6 @@
 
 #view-overlay{
   @include overlay;
+
+  position: fixed;
 }

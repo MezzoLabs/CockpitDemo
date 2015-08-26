@@ -1,0 +1,25 @@
+{
+  "name": "Mezzo",
+  "version": "0.0.1",
+  "homepage": "https://github.com/MezzoLabs/CockpitDemo",
+  "description": "Bower file for the backend of Mezzo",
+  "license": "",
+  "dependencies": {
+    "bootstrap-sass": "3.x",
+    "font-awesome": "4.x",
+    "select2": "~4.0.0",
+    "bootstrap-datepicker": "~1.4.0",
+    "jquery.maskedinput": "~1.4.1",
+    "awesome-bootstrap-checkbox": "~0.3.5",
+    "x-editable": "~1.5.1",
+    "animate.css": "~3.4.0"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower",
+    "test",
+    "tests"
+  ]
+}
