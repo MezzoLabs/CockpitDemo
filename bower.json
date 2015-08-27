@@ -5,14 +5,18 @@
   "description": "Bower file for the backend of Mezzo",
   "license": "",
   "dependencies": {
+    "angular": "~1.4.4",
+    "angular-route": "~1.4.4",
+    "angular-sortable-view": "~0.0.13",
+    "animate.css": "~3.4.0",
+    "awesome-bootstrap-checkbox": "~0.3.5",
+    "bootstrap-datepicker": "~1.4.0",
     "bootstrap-sass": "3.x",
     "font-awesome": "4.x",
-    "select2": "~4.0.0",
-    "bootstrap-datepicker": "~1.4.0",
     "jquery.maskedinput": "~1.4.1",
-    "awesome-bootstrap-checkbox": "~0.3.5",
-    "x-editable": "~1.5.1",
-    "animate.css": "~3.4.0"
+    "lodash": "~3.10.1",
+    "select2": "~4.0.0",
+    "x-editable": "~1.5.1"
   },
   "ignore": [
     "**/.*",

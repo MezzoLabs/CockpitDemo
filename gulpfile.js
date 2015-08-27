@@ -1,4 +1,5 @@
 var elixir = require('laravel-elixir');
+var blueprint = require('gulp-blueprint');
 
 /*
  |--------------------------------------------------------------------------
@@ -12,6 +13,9 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
+    blueprint(function modify(draft){
+        draft.elixir = mix;
+    });
 
     mix.sass('app.scss');
     mix.browserify('demo.js');
