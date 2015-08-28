@@ -15,4 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::controller('cockpit', "CockpitController");
+Route::get('/cockpit/pages', function () {
+    return view('layouts.cockpit');
+});
+
+Route::get('/cockpit/models', function () {
+    return view('layouts.cockpit');
+});

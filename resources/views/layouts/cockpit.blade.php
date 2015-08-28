@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html ng-app="Mezzo">
     <head>
-        <title>App Name - @yield('title')</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>App Name</title>
         <base href="/">
 
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,400italic' rel='stylesheet' type='text/css'>
@@ -21,11 +24,11 @@
     </head>
     <body class="sidebar-pinned">
         <div id="page-container">
-            @include('layouts.cockpit.sidebar')
+            <div ng-include="'layout/sidebar.html'"></div>
             <div id="view-main">
-                @include('layouts.cockpit.topbar')
-                @include('layouts.cockpit.content')
-                @include('layouts.cockpit.quickview')
+                <div ng-include="'layout/topbar.html'"></div>
+                <div ng-include="'layout/content.html'"></div>
+                <div ng-include="'layout/quickview.html'"></div>
             </div>
         </div>
     </body>
