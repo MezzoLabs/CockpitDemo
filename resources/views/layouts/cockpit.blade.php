@@ -14,7 +14,7 @@
         <script src="/bower/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.js" type="text/javascript"></script>
         <script src="/bower/select2/dist/js/select2.js" type="text/javascript"></script>
         <script src="/bower/angular/angular.min.js"></script>
-        <script src="/bower/angular-route/angular-route.min.js"></script>
+        <script src="/bower/angular-ui-router/release/angular-ui-router.min.js"></script>
         <script src="/bower/angular-sortable-view/src/angular-sortable-view.min.js"></script>
         <script src="/js/templates.js"></script>
         <script src="/js/bundle.js" type="text/javascript"></script>
