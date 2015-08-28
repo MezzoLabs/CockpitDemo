@@ -8,12 +8,14 @@
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link href="/bower/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
+        <link href="/bower/jstree-bootstrap-theme/dist/themes/proton/style.css" rel="stylesheet">
         <link href="/css/app.css" rel='stylesheet' type="text/css" >
 
         <script src="/bower/jquery/dist/jquery.min.js" type="text/javascript"></script>
         <script src="/bower/bootstrap-sass/assets/javascripts/bootstrap.js" type="text/javascript"></script>
         <script src="/bower/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.js" type="text/javascript"></script>
         <script src="/bower/select2/dist/js/select2.js" type="text/javascript"></script>
+        <script src="/bower/jstree/dist/jstree.js" type="text/javascript"></script>
         <script src="/bower/angular/angular.min.js"></script>
         <script src="/bower/angular-route/angular-route.min.js"></script>
         <script src="/bower/angular-sortable-view/src/angular-sortable-view.min.js"></script>

@@ -1,7 +1,6 @@
 <main id="content-container">
-    <div id="content-aside">
-        hello
-    </div>
+    @include('layouts.cockpit.content.aside')
+
 
     <div id="content-main">
     <div class="content">

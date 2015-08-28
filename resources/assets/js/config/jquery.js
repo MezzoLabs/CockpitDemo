@@ -76,4 +76,15 @@ export default () => {
 
 
     $('select').select2();
+
+    $('.nav-tabs').tab();
+
+    $('.jstree').jstree({
+        'core': {
+            'themes': {
+                'name': 'proton',
+                'responsive': true
+            }
+        }
+    });
 };
