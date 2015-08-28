@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="Mezzo">
     <head>
         <title>App Name - @yield('title')</title>
         <base href="/">
