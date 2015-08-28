@@ -15,6 +15,5 @@ var blueprint = require('gulp-blueprint');
 elixir(function(mix) {
     blueprint(function modify(draft){
         draft.elixir = mix;
-        draft.register = 'resources/assets/js/config';
     });
 });
