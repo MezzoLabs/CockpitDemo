@@ -1,12 +1,12 @@
 <div id="content-aside">
 
     <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-        <li class="active"><a href="#red" data-toggle="tab"><i class="ion-navicon"></i> Red</a></li>
-        <li><a href="#orange" data-toggle="tab"><i class="ion-settings"></i> Orange</a></li>
+        <li ><a href="#red" data-toggle="tab"><i class="ion-navicon"></i> Red</a></li>
+        <li class="active"><a href="#orange" data-toggle="tab"><i class="ion-settings"></i> Orange</a></li>
         <li><a href="#yellow" data-toggle="tab">Yellow</a></li>
     </ul>
     <div id="my-tab-content" class="tab-content wrapper">
-        <section class="tab-pane active" id="red">
+        <section class="tab-pane" id="red">
             <h3>Red</h3>
             <div class="list-group">
               <a href="#" class="list-group-item active">
@@ -25,13 +25,13 @@
               <a href="#" class="list-group-item">Vestibulum at eros</a>
             </div>
         </section>
-        <section class="tab-pane" id="orange">
+        <section class="tab-pane active" id="orange">
             <div class="jstree">
               <ul>
                 <li>Root node 1
                   <ul>
                     <li>Child node 1</li>
-                    <li><a href="#">Child node 2</a></li>
+                    <li><a class="jstree-clicked" href="#">Child node 2</a></li>
                   </ul>
                 </li>
               </ul>

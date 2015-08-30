@@ -9,7 +9,6 @@ export default () => {
         else {
             $('body').addClass('sidebar-pinned').removeClass('sidebar-unpinned');
             $(this).addClass('fa-dot-circle-o').removeClass('fa-circle-o');
-
         }
 
     });

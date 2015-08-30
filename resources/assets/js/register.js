@@ -5,12 +5,12 @@ module.exports = app => {
 	register(require('./model-builder/components/component.service.js'));
 	register(require('./model-builder/components/checkbox/checkbox-options.directive.js'));
 	register(require('./model-builder/components/checkbox/checkbox.directive.js'));
-	register(require('./model-builder/components/dropdown/dropdown-options.directive.js'));
-	register(require('./model-builder/components/dropdown/dropdown.directive.js'));
 	register(require('./model-builder/components/text-multi/text-multi-options.directive.js'));
 	register(require('./model-builder/components/text-multi/text-multi.directive.js'));
 	register(require('./model-builder/components/text-single/text-single-options.directive.js'));
 	register(require('./model-builder/components/text-single/text-single.directive.js'));
+	register(require('./model-builder/components/dropdown/dropdown-options.directive.js'));
+	register(require('./model-builder/components/dropdown/dropdown.directive.js'));
 
     function register(module){
         if(module.controller){

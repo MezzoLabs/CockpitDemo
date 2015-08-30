@@ -17,8 +17,6 @@
                     @include("layouts/test/panel")
                 </div>
 
-
-
             </div>
 
         </div>

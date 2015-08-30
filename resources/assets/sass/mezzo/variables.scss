@@ -1,12 +1,12 @@
 $font-family-roboto:  'Roboto', sans-serif !default;
 
-
-
 $brand-primary:     #fb503b;
 $brand-success:     #46c37b;
 $mezzo-gray-dark:   #191b1f;
 $mezzo-gray:        #2a2e35;
 $mezzo-gray-light:  #34373d;
+
+$brand-primary-light: lighten($brand-primary, 10%);
 
 $mezzo-font-color-dark:   #333333;
 $mezzo-font-color:        #555555;
