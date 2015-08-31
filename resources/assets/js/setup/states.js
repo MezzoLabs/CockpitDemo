@@ -1,13 +1,29 @@
-class State {
-
-    constructor(name, url, templateUrl, controller){
-        this.name = name;
-        this.route = { url, templateUrl, controller };
-    }
-
-}
-
 export default [
-    new State('pages', '/cockpit/pages', 'pages/pages.html', 'PagesController'),
-    new State('models', '/cockpit/models', 'model-builder/model-builder.html')
+    {
+        name: 'pages',
+        route: {
+            url: '/cockpit/pages',
+            views: {
+                main: {
+                    templateUrl: 'pages/pages.html',
+                    controller: 'PagesController'
+                }
+            }
+        }
+    }, {
+        name: 'models',
+        route: {
+            url: '/cockpit/models',
+            views: {
+                aside: {
+                    templateUrl: 'model-builder/aside.html',
+                    controller: 'ModelBuilderController'
+                },
+                main: {
+                    templateUrl: 'model-builder/main.html',
+                    controller: 'ModelBuilderController'
+                }
+            }
+        }
+    }
 ];
