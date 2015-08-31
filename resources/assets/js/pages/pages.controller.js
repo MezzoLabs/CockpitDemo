@@ -1,7 +1,5 @@
-import Controller from '../common/Controller';
+export default { name: 'PagesController', controller };
 
-export default new Controller('PagesController', PagesController);
-
-function PagesController(){
+function controller(){
 
 }
