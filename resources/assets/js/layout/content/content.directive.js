@@ -1,8 +1,15 @@
 export default { name: 'mezzoContent', directive };
 
-function directive(){
+/*@ngInject*/ function directive(quickview){
     return {
         restrict: 'E',
-        templateUrl: 'layout/content/content.html'
+        templateUrl: 'layout/content/content.html',
+        link
     };
+
+    function link(){
+        $('#content-main, #view-overlay').click(function(){
+            quickview.setVisible(false);
+        });
+    }
 }

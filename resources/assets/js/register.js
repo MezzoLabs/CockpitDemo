@@ -3,6 +3,10 @@ module.exports = app => {
 	register(require('./common/uid.service.js'));
 	register(require('./model-builder/model-builder.controller.js'));
 	register(require('./pages/pages.controller.js'));
+	register(require('./layout/content/content.directive.js'));
+	register(require('./layout/quickview/quickview.directive.js'));
+	register(require('./layout/sidebar/sidebar.directive.js'));
+	register(require('./layout/topbar/topbar.directive.js'));
 	register(require('./model-builder/components/component.service.js'));
 	register(require('./model-builder/components/checkbox/checkbox-options.directive.js'));
 	register(require('./model-builder/components/checkbox/checkbox.directive.js'));
