@@ -4,9 +4,13 @@ export default [
         route: {
             url: '/cockpit/pages',
             views: {
+                aside: {
+                    templateUrl: 'pages/aside.html',
+                    controller: 'PagesAsideController'
+                },
                 main: {
-                    templateUrl: 'pages/pages.html',
-                    controller: 'PagesController'
+                    templateUrl: 'pages/main.html',
+                    controller: 'PagesMainController'
                 }
             }
         }
