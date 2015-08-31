@@ -1,15 +1,15 @@
 export default { name: 'mezzoQuickview', directive };
 
-function directive(){
+/*@ngInject*/ function directive(quickview){
     return {
         restrict: 'E',
         templateUrl: 'layout/quickview/quickview.html',
         link
     };
-}
 
-/*@ngInject*/ function link(quickview){
-    $('#quickview .btn-close').click(function(){
-        quickview.setVisible(false);
-    });
+    function link(){
+        $('#quickview .btn-close, #view-overlay').click(function(){
+            quickview.setVisible(false);
+        });
+    }
 }

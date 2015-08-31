@@ -8,7 +8,7 @@ export default { name: 'mezzoContent', directive };
     };
 
     function link(){
-        $('#content-main, #view-overlay').click(function(){
+        $('#content-main').click(function(){
             quickview.setVisible(false);
         });
     }

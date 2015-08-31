@@ -1,4 +1,4 @@
-export default { name: 'mezzoQuickviewTrigger', directive };
+export default { name: 'mezzoQuickview', directive };
 
 /*@ngInject*/ function directive(quickview){
     return {
@@ -6,7 +6,7 @@ export default { name: 'mezzoQuickviewTrigger', directive };
         link
     };
 
-    function link(scope, attributes, element){
+    function link(scope, element, attrs){
         $(element).click(() => {
             quickview.setVisible(!quickview.isVisible());
             return false;
