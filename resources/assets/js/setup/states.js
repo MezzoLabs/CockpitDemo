@@ -25,5 +25,15 @@ export default [
                 }
             }
         }
+    }, {
+        name: 'panels',
+        route: {
+            url: '/cockpit/panels',
+            views: {
+                main: {
+                    templateUrl: 'panels/panels.html'
+                }
+            }
+        }
     }
 ];
