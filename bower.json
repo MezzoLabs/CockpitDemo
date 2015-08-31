@@ -16,7 +16,9 @@
     "jquery.maskedinput": "~1.4.1",
     "lodash": "~3.10.1",
     "select2": "~4.0.0",
-    "x-editable": "~1.5.1"
+    "x-editable": "~1.5.1",
+    "jstree": "~3.2.1",
+    "jstree-bootstrap-theme": "~1.0.1"
   },
   "ignore": [
     "**/.*",

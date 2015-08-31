@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return \View::make('pages/pages');
+
 });
 
 Route::get('/cockpit/pages', function () {
