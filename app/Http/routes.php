@@ -16,4 +16,14 @@ Route::get('/', function () {
 
 });
 
-Route::controller('cockpit', "CockpitController");
+Route::get('/cockpit/pages', function () {
+    return view('layouts.cockpit');
+});
+
+Route::get('/cockpit/models', function () {
+    return view('layouts.cockpit');
+});
+
+Route::get('/cockpit/panels', function () {
+    return view('layouts.cockpit');
+});

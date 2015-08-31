@@ -1,0 +1,52 @@
+<div style="padding: 10px">
+    <div class="row" style="margin-right: 0">
+        <div class="col-xs-6">
+
+            <button type="button" class="btn btn-primary" ng-click="modelBuilder.tab = 'add'">
+                Add Field
+            </button>
+
+        </div>
+        <div class="col-xs-6">
+
+            <button type="button" class="btn btn-primary disabled">
+                Edit Field
+            </button>
+
+        </div>
+    </div>
+
+    <br>
+
+    <div ng-show="modelBuilder.tab === 'add'">
+
+        <button type="button" class="btn btn-default btn-block" ng-click="modelBuilder.addField('text-single')">
+            Single line text
+        </button>
+
+        <button type="button" class="btn btn-default btn-block" ng-click="modelBuilder.addField('text-multi')">
+            Paragraph text
+        </button>
+
+        <button type="button" class="btn btn-default btn-block" ng-click="modelBuilder.addField('checkbox')">
+            Checkbox
+        </button>
+
+        <button type="button" class="btn btn-default btn-block" ng-click="modelBuilder.addField('dropdown')">
+            Dropdown
+        </button>
+
+    </div>
+
+    <div ng-show="modelBuilder.tab === 'edit'">
+
+        <h4>Options</h4>
+        <div mezzo-compile="modelBuilder.selectedField.optionsDirective"></div>
+        <br>
+        <button type="button" class="btn btn-danger" ng-click="modelBuilder.deleteField(modelBuilder.selectedField)">
+            <span class="ion-trash-a"></span>
+            Delete field
+        </button>
+
+    </div>
+</div>

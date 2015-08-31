@@ -9,6 +9,7 @@ export default () => {
         else {
             $('body').addClass('sidebar-pinned').removeClass('sidebar-unpinned');
             $(this).addClass('fa-dot-circle-o').removeClass('fa-circle-o');
+
         }
 
     });
@@ -75,15 +76,4 @@ export default () => {
 
 
     $('select').select2();
-
-    $('.nav-tabs').tab();
-
-    $('.jstree').jstree({
-        'core': {
-            'themes': {
-                'name': 'proton',
-                'responsive': true
-            }
-        }
-    });
 };

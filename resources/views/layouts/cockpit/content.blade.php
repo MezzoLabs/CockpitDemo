@@ -1,6 +1,7 @@
 <main id="content-container">
-    @include('layouts.cockpit.content.aside')
-
+    <div id="content-aside">
+        hello
+    </div>
 
     <div id="content-main">
     <div class="content">
@@ -16,6 +17,8 @@
                 <div class="col-md-12">
                     @include("layouts/test/panel")
                 </div>
+
+
 
             </div>
 
