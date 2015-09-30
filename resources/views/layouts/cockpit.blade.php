@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link href="/bower/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.gridster/0.5.6/jquery.gridster.min.css" rel="stylesheet">
+        <link href="/bower/chosen/chosen.min.css" rel="stylesheet">
         <link href="/css/app.css" rel='stylesheet' type="text/css" >
         <!-- CSS -->
     </head>
@@ -38,6 +39,7 @@
         <script src="/bower/angular/angular.min.js"></script>
         <script src="/bower/angular-ui-router/release/angular-ui-router.min.js"></script>
         <script src="/bower/angular-sortable-view/src/angular-sortable-view.min.js"></script>
+        <script src="/bower/chosen/chosen.jquery.min.js"></script>
         <script src="/js/templates.js"></script>
         <script src="/js/app.js"></script>
         <!-- JavaScript -->

@@ -1,0 +1,17 @@
+<div class="form-group">
+    <label ng-bind="options.title"></label>
+    <select class="form-control" ng-if="options.mode === '1'">
+        <option>Simon</option>
+        <option>Marc</option>
+    </select>
+    <div ng-show="options.mode === 'n'">
+        <select class="form-control chosen" multiple ng-if="options.mode === 'n'">
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Expert</option>
+        </select>
+        <script>
+            $('select.chosen').chosen();
+        </script>
+    </div>
+</div>
