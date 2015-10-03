@@ -5,7 +5,7 @@
         <li class="active">
             <a href="#add-field-tab" data-toggle="tab">Add Field</a>
         </li>
-        <li>
+        <li ng-class="{ disabled: vm.modelBuilder.selectedField === null }">
             <a href="#edit-field-tab" data-toggle="tab">Edit Field</a>
         </li>
     </ul>

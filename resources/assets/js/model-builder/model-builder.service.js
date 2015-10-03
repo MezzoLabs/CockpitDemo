@@ -10,7 +10,6 @@ class ModelBuilder {
         this.componentService = componentService;
         this.uid = uid;
         this.fields = [];
-        this.tab = 'add';
         this.selectedField = null;
     }
 
@@ -28,7 +27,6 @@ class ModelBuilder {
     }
 
     deleteField(deleted){
-        this.tab = 'add';
         this.selectedField = null;
 
         for(var i = 0; i < this.fields.length; i++){
@@ -42,10 +40,10 @@ class ModelBuilder {
     }
 
     selectField(field){
-        this.tab = 'edit';
         this.selectedField = field;
 
         this.componentService.setOptions(field.options);
+        console.log($('a[href="#edit-field-tab"]').tab('show'));
     }
 
 }
