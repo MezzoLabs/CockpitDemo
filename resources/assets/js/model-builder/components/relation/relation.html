@@ -1,5 +1,6 @@
 <div class="form-group">
     <label ng-bind="options.title"></label>
+    <p class="text-primary" ng-bind="options.sentence()"></p>
     <select class="form-control" ng-if="options.mode === '1'">
         <option>Simon</option>
         <option>Marc</option>

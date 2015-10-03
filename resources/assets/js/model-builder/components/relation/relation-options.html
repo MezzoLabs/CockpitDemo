@@ -39,7 +39,7 @@
     </div>
 
     <div class="col-xs-7">
-        <select class="form-control" ng-options="model.id as options.getModelLabel(model, options.rightMode) for model in options.models track by $index" ng-model="options.rightModel"></select>
+        <select class="form-control" ng-options="options.getModelLabel(model, options.rightMode) for model in options.models track by model.id" ng-model="options.rightModel"></select>
     </div>
 
 </div>
