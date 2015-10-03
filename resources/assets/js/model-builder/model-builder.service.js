@@ -43,7 +43,7 @@ class ModelBuilder {
         this.selectedField = field;
 
         this.componentService.setOptions(field.options);
-        console.log($('a[href="#edit-field-tab"]').tab('show'));
+        $('a[href="#edit-field-tab"]').tab('show');
     }
 
 }
