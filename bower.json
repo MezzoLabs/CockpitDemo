@@ -19,7 +19,8 @@
     "x-editable": "~1.5.1",
     "jstree": "~3.2.1",
     "jstree-bootstrap-theme": "~1.0.1",
-    "chosen": "~1.4.2"
+    "chosen": "~1.4.2",
+    "pluralize": "~1.2.1"
   },
   "ignore": [
     "**/.*",

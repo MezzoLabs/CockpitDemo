@@ -40,6 +40,7 @@
         <script src="/bower/angular-ui-router/release/angular-ui-router.min.js"></script>
         <script src="/bower/angular-sortable-view/src/angular-sortable-view.min.js"></script>
         <script src="/bower/chosen/chosen.jquery.min.js"></script>
+        <script src="/bower/pluralize/pluralize.js"></script>
         <script src="/js/templates.js"></script>
         <script src="/js/app.js"></script>
         <!-- JavaScript -->

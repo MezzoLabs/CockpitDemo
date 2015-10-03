@@ -27,6 +27,8 @@ class ModelBuilder {
     }
 
     deleteField(deleted){
+        $('a[href="#add-field-tab"]').tab('show');
+
         this.selectedField = null;
 
         for(var i = 0; i < this.fields.length; i++){
@@ -40,10 +42,11 @@ class ModelBuilder {
     }
 
     selectField(field){
+        $('a[href="#edit-field-tab"]').tab('show');
+
         this.selectedField = field;
 
         this.componentService.setOptions(field.options);
-        $('a[href="#edit-field-tab"]').tab('show');
     }
 
 }

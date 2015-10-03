@@ -6,15 +6,15 @@
 <div class="row">
 
     <div class="col-xs-5">
-        <select class="form-control">
-            <option>One</option>
-            <option>Many</option>
+        <select class="form-control" ng-model="options.leftMode">
+            <option value="1">One</option>
+            <option value="n">Many</option>
         </select>
     </div>
 
-    <div class="col-xs-7">
+    <div class="col-xs-7" style="vertical-align: middle">
         <select class="form-control" disabled>
-            <option>Tutorial</option>
+            <option ng-bind="options.getModelLabel(options.leftModel, options.leftMode)"></option>
         </select>
     </div>
 
@@ -23,7 +23,8 @@
 <hr>
 
 <div style="text-align: center">
-    <strong>has</strong>
+    <strong ng-show="options.leftMode === '1'">has</strong>
+    <strong ng-show="options.leftMode === 'n'">have</strong>
 </div>
 
 <hr>
@@ -31,17 +32,21 @@
 <div class="row">
 
     <div class="col-xs-5">
-        <select class="form-control" ng-model="options.mode">
+        <select class="form-control" ng-model="options.rightMode">
             <option value="1">One</option>
             <option value="n">Many</option>
         </select>
     </div>
 
     <div class="col-xs-7">
-        <select class="form-control">
-            <option>Author</option>
-            <option>Category</option>
-        </select>
+        <select class="form-control" ng-options="model.id as options.getModelLabel(model, options.rightMode) for model in options.models track by $index" ng-model="options.rightModel"></select>
     </div>
 
 </div>
+
+<hr>
+
+<button type="button" class="btn btn-default btn-block text-muted">
+    <span class="ion-gear-a pull-right"></span>
+    Advanced Options
+</button>
