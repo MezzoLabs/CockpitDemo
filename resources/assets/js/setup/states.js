@@ -21,11 +21,11 @@ export default [
             views: {
                 aside: {
                     templateUrl: 'model-builder/aside.html',
-                    controller: 'ModelBuilderController'
+                    controller: 'ModelBuilderController as vm'
                 },
                 main: {
                     templateUrl: 'model-builder/main.html',
-                    controller: 'ModelBuilderController'
+                    controller: 'ModelBuilderController as vm'
                 }
             }
         }

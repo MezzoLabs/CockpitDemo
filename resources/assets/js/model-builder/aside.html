@@ -1,56 +1,60 @@
 <div style="padding: 10px">
-    <div class="row" style="margin-right: 0">
-        <div class="col-xs-6">
 
-            <button type="button" class="btn btn-primary" ng-click="modelBuilder.tab = 'add'">
-                Add Field
-            </button>
-
-        </div>
-        <div class="col-xs-6">
-
-            <button type="button" class="btn btn-primary disabled">
-                Edit Field
-            </button>
-
-        </div>
-    </div>
+    <!-- Tabs -->
+    <ul class="nav nav-tabs">
+        <li class="active">
+            <a href="#add-field-tab" data-toggle="tab">Add Field</a>
+        </li>
+        <li>
+            <a href="#edit-field-tab" data-toggle="tab">Edit Field</a>
+        </li>
+    </ul>
+    <!-- Tabs -->
 
     <br>
 
-    <div ng-show="modelBuilder.tab === 'add'">
+    <!-- Tab Content -->
+    <div class="tab-content">
 
-        <button type="button" class="btn btn-default btn-block" ng-click="modelBuilder.addField('text-single')">
-            Single line text
-        </button>
+        <!-- Add Field Tab -->
+        <div id="add-field-tab" class="tab-pane fade in active">
 
-        <button type="button" class="btn btn-default btn-block" ng-click="modelBuilder.addField('text-multi')">
-            Paragraph text
-        </button>
+            <!-- Save -->
+            <button type="button" class="btn btn-success btn-block">
+                <span class="ion-checkmark-circled pull-right"></span>
+                Save
+            </button>
+            <!-- Save -->
 
-        <button type="button" class="btn btn-default btn-block" ng-click="modelBuilder.addField('checkbox')">
-            Checkbox
-        </button>
+            <hr>
 
-        <button type="button" class="btn btn-default btn-block" ng-click="modelBuilder.addField('dropdown')">
-            Dropdown
-        </button>
+            <!-- Add Buttons -->
+            <div class="btn-group-vertical btn-block">
+                <button type="button" class="btn btn-default" ng-repeat="button in vm.buttons" ng-click="vm.modelBuilder.addField(button.component)">
+                    <span class="pull-right" ng-class="button.icon"></span>
+                    <span ng-bind="button.label"></span>
+                </button>
+            </div>
+            <!-- Add Buttons -->
 
-        <button type="button" class="btn btn-default btn-block" ng-click="modelBuilder.addField('relation')">
-            Relation
-        </button>
+        </div>
+        <!-- Add Field Tab -->
+
+        <!-- Edit Field Tab -->
+        <div id="edit-field-tab" class="tab-pane fade">
+
+            <div mezzo-compile="vm.modelBuilder.selectedField.optionsDirective"></div>
+
+            <hr>
+
+            <button type="button" class="btn btn-danger btn-block" ng-click="vm.modelBuilder.deleteField(modelBuilder.selectedField)">
+                <span class="ion-close pull-right"></span>
+                Delete field
+            </button>
+
+        </div>
+        <!-- Edit Field Tab -->
 
     </div>
-
-    <div ng-show="modelBuilder.tab === 'edit'">
-
-        <h4>Options</h4>
-        <div mezzo-compile="modelBuilder.selectedField.optionsDirective"></div>
-        <br>
-        <button type="button" class="btn btn-danger" ng-click="modelBuilder.deleteField(modelBuilder.selectedField)">
-            <span class="ion-trash-a"></span>
-            Delete field
-        </button>
-
-    </div>
+    <!-- Tab Content -->
 </div>
