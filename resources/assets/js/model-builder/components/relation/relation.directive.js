@@ -12,9 +12,11 @@ function modifyOptions(options) {
         { id: 2, name: 'Category' }
     ];
     options.rightModel = options.models[0];
+    options.title = options.rightModel.name;
 
     options.getModelLabel = getModelLabel;
     options.sentence = sentence;
+    options.onRightModelChange = onRightModelChange;
 
     function getModelLabel(model, mode) {
         switch (mode) {
@@ -49,5 +51,9 @@ function modifyOptions(options) {
         }
 
         return sentence.join(' ');
+    }
+
+    function onRightModelChange(){
+        options.title = options.rightModel.name;
     }
 }
