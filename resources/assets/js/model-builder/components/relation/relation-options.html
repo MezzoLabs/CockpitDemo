@@ -32,7 +32,7 @@
 <div class="row">
 
     <div class="col-xs-5">
-        <select class="form-control" ng-model="options.rightMode">
+        <select class="form-control" ng-model="options.rightMode" ng-change="options.updateTitle()">
             <option value="1">One</option>
             <option value="n">Many</option>
         </select>
@@ -42,14 +42,16 @@
         <select class="form-control"
                 ng-options="options.getModelLabel(model, options.rightMode) for model in options.models track by model.id"
                 ng-model="options.rightModel"
-                ng-change="options.onRightModelChange()"></select>
+                ng-change="options.updateTitle()"></select>
     </div>
 
 </div>
 
 <hr>
 
-<button type="button" class="btn btn-default btn-block text-muted">
+<button type="button" class="btn btn-default btn-block text-muted" data-toggle="modal" data-target="div.modal">
     <span class="ion-gear-a pull-right"></span>
     Advanced Options
 </button>
+
+<ng-include src="'model-builder/components/relation/advanced-options.html'"></ng-include>

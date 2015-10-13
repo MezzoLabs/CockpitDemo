@@ -13,10 +13,12 @@ function modifyOptions(options) {
     ];
     options.rightModel = options.models[0];
     options.title = options.rightModel.name;
+    options.columnPosition = 'left';
 
     options.getModelLabel = getModelLabel;
     options.sentence = sentence;
-    options.onRightModelChange = onRightModelChange;
+    options.updateTitle = updateTitle;
+    options.showPivotTable = showPivotTable;
 
     function getModelLabel(model, mode) {
         switch (mode) {
@@ -53,7 +55,11 @@ function modifyOptions(options) {
         return sentence.join(' ');
     }
 
-    function onRightModelChange(){
-        options.title = options.rightModel.name;
+    function updateTitle(){
+        options.title = getModelLabel(options.rightModel, options.rightMode);
+    }
+
+    function showPivotTable(){
+        return options.leftMode === 'n' && options.rightMode === 'n';
     }
 }

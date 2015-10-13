@@ -1,0 +1,83 @@
+<div class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Advanced Options</h4>
+            </div>
+            <div class="modal-body">
+                <!-- Title -->
+                <div class="form-group">
+                    <label>Title</label>
+                    <input type="text" class="form-control" placeholder="Title" ng-model="options.title" disabled>
+                </div>
+                <!-- Title -->
+                <!-- Relation Sentence -->
+                <p class="text-primary" ng-bind="options.sentence()"></p>
+                <!-- Relation Sentence -->
+                <!-- Pivot Table -->
+                <div class="form-group" ng-show="options.showPivotTable()">
+                    <label>Pivot Table</label>
+                    <input type="text" class="form-control" placeholder="Pivot Table">
+                </div>
+                <!-- Pivot Table -->
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th ng-bind="options.getModelLabel(options.leftModel, options.leftMode)"></th>
+                        <th ng-bind="options.getModelLabel(options.rightModel, options.rightMode)"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <!-- Naming -->
+                            <div class="form-group">
+                                <label>Naming</label>
+                                <input type="text" class="form-control" placeholder="Naming">
+                            </div>
+                            <!-- Naming -->
+                            <!-- Column Radio -->
+                            <div class="radio" ng-hide="options.showPivotTable()">
+                                <label>
+                                    <input type="radio" name="column" value="left" ng-model="options.columnPosition" checked>
+                                    Column
+                                </label>
+                            </div>
+                            <!-- Column Radio -->
+                            <!-- Column Name -->
+                            <div class="form-group" ng-show="options.columnPosition === 'left'">
+                                <label>Column</label>
+                                <input type="text" class="form-control" placeholder="Column">
+                            </div>
+                            <!-- Column Name -->
+                        </td>
+                        <td>
+                            <!-- Naming -->
+                            <div class="form-group">
+                                <label>Naming</label>
+                                <input type="text" class="form-control" placeholder="Naming">
+                            </div>
+                            <!-- Naming -->
+                            <!-- Column Radio -->
+                            <div class="radio" ng-hide="options.showPivotTable()">
+                                <label>
+                                    <input type="radio" name="column" value="right" ng-model="options.columnPosition">
+                                    Column
+                                </label>
+                            </div>
+                            <!-- Column Radio -->
+                            <!-- Column Name -->
+                            <div class="form-group" ng-show="options.columnPosition === 'right'">
+                                <label>Column</label>
+                                <input type="text" class="form-control" placeholder="Column">
+                            </div>
+                            <!-- Column Name -->
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
