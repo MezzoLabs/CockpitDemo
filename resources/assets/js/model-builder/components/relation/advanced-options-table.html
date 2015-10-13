@@ -23,7 +23,7 @@
                 </div>
                 <!-- Column Radio -->
                 <!-- Column Name -->
-                <div class="form-group" ng-show="options.columnPosition === 'left'">
+                <div class="form-group" ng-show="options.showLeftColumn()">
                     <label>Column</label>
                     <input type="text" class="form-control" placeholder="Column">
                 </div>
@@ -45,7 +45,7 @@
                 </div>
                 <!-- Column Radio -->
                 <!-- Column Name -->
-                <div class="form-group" ng-show="options.columnPosition === 'right'">
+                <div class="form-group" ng-show="options.showRightColumn()">
                     <label>Column</label>
                     <input type="text" class="form-control" placeholder="Column">
                 </div>

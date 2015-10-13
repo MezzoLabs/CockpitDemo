@@ -14,11 +14,14 @@ function modifyOptions(options) {
     options.rightModel = options.models[0];
     options.title = options.rightModel.name;
     options.columnPosition = 'left';
+    options.pivotTable = getPivotTableName();
 
     options.getModelLabel = getModelLabel;
     options.sentence = sentence;
     options.updateTitle = updateTitle;
     options.showPivotTable = showPivotTable;
+    options.showLeftColumn = showLeftColumn;
+    options.showRightColumn = showRightColumn;
 
     function getModelLabel(model, mode) {
         switch (mode) {
@@ -61,5 +64,30 @@ function modifyOptions(options) {
 
     function showPivotTable(){
         return options.leftMode === 'n' && options.rightMode === 'n';
+    }
+
+    function getPivotTableName(){
+        var modelNames = [ options.leftModel.name.toLowerCase(), options.rightModel.name.toLocaleLowerCase() ];
+        var sortedNames = modelNames.sort((a, b) => {
+            if(a < b){
+                return -1;
+            }
+
+            if(a > b){
+                return 1;
+            }
+
+            return 0;
+        });
+
+        return sortedNames.join('_');
+    }
+
+    function showLeftColumn(){
+        return options.columnPosition === 'left' || options.showPivotTable();
+    }
+
+    function showRightColumn(){
+        return options.columnPosition === 'right' || options.showPivotTable();
     }
 }

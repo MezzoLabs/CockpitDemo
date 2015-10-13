@@ -18,7 +18,7 @@
                 <!-- Pivot Table -->
                 <div class="form-group" ng-show="options.showPivotTable()">
                     <label>Pivot Table</label>
-                    <input type="text" class="form-control" placeholder="Pivot Table">
+                    <input type="text" class="form-control" placeholder="Pivot Table" ng-model="options.pivotTable">
                 </div>
                 <!-- Pivot Table -->
                 <ng-include src="'model-builder/components/relation/advanced-options-table.html'"></ng-include>
