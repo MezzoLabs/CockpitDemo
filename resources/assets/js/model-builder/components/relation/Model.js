@@ -6,6 +6,8 @@ class Model {
         this.id = id;
         this.name = name;
         this.mode = Mode.ONE;
+        this.naming = name.toLowerCase();
+        this.column = name.toLowerCase() + '_id';
     }
 
     label(){

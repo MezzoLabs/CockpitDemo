@@ -22,6 +22,7 @@ function modifyOptions(options) {
     options.columnPosition = Position.LEFT;
     options.pivotTable = null;
     options.Mode = Mode;
+    options.Position = Position;
 
     options.sentence = () => sentence(options.leftModel, options.rightModel);
     options.onModelUpdate = onModelUpdate;

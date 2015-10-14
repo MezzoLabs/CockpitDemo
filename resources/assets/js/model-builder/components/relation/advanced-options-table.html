@@ -1,23 +1,24 @@
 <table class="table">
     <thead>
         <tr>
-            <th ng-bind="options.getModelLabel(options.leftModel, options.leftMode)"></th>
-            <th ng-bind="options.getModelLabel(options.rightModel, options.rightMode)"></th>
+            <th ng-bind="options.leftModel.label()"></th>
+            <th ng-bind="options.rightModel.label()"></th>
         </tr>
     </thead>
     <tbody>
         <tr>
+            <!-- Left Model -->
             <td>
                 <!-- Naming -->
                 <div class="form-group">
                     <label>Naming</label>
-                    <input type="text" class="form-control" placeholder="Naming">
+                    <input type="text" class="form-control" placeholder="Naming" ng-model="options.leftModel.naming">
                 </div>
                 <!-- Naming -->
                 <!-- Column Radio -->
                 <div class="radio" ng-hide="options.showPivotTable()">
                     <label>
-                        <input type="radio" name="column" value="left" ng-model="options.columnPosition" checked>
+                        <input type="radio" name="column" ng-value="options.Position.LEFT" ng-model="options.columnPosition" checked>
                         Column
                     </label>
                 </div>
@@ -25,21 +26,23 @@
                 <!-- Column Name -->
                 <div class="form-group" ng-show="options.showLeftColumn()">
                     <label>Column</label>
-                    <input type="text" class="form-control" placeholder="Column">
+                    <input type="text" class="form-control" placeholder="Column" ng-model="options.leftModel.column">
                 </div>
                 <!-- Column Name -->
             </td>
+            <!-- Left Model -->
+            <!-- Right Model -->
             <td>
                 <!-- Naming -->
                 <div class="form-group">
                     <label>Naming</label>
-                    <input type="text" class="form-control" placeholder="Naming">
+                    <input type="text" class="form-control" placeholder="Naming" ng-model="options.rightModel.naming">
                 </div>
                 <!-- Naming -->
                 <!-- Column Radio -->
                 <div class="radio" ng-hide="options.showPivotTable()">
                     <label>
-                        <input type="radio" name="column" value="right" ng-model="options.columnPosition">
+                        <input type="radio" name="column" ng-value="options.Position.RIGHT" ng-model="options.columnPosition">
                         Column
                     </label>
                 </div>
@@ -47,10 +50,11 @@
                 <!-- Column Name -->
                 <div class="form-group" ng-show="options.showRightColumn()">
                     <label>Column</label>
-                    <input type="text" class="form-control" placeholder="Column">
+                    <input type="text" class="form-control" placeholder="Column" ng-model="options.rightModel.column">
                 </div>
                 <!-- Column Name -->
             </td>
+            <!-- Right Model -->
         </tr>
     </tbody>
 </table>
