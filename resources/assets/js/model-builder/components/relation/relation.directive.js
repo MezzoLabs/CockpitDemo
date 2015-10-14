@@ -2,6 +2,7 @@ import Component from '../Component';
 import Model from './Model';
 import Mode from './Mode';
 import sentence from './sentence';
+import alphabetical from './alphabetical';
 
 const Position = {
     LEFT: 0,
@@ -38,17 +39,7 @@ function modifyOptions(options) {
 
     function getPivotTableName(){
         var modelNames = [ options.leftModel.name.toLowerCase(), options.rightModel.name.toLocaleLowerCase() ];
-        var sortedNames = modelNames.sort((a, b) => {
-            if(a < b){
-                return -1;
-            }
-
-            if(a > b){
-                return 1;
-            }
-
-            return 0;
-        });
+        var sortedNames = modelNames.sort(alphabetical);
 
         return sortedNames.join('_');
     }
