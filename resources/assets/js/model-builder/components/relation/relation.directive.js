@@ -27,8 +27,8 @@ function modifyOptions(options) {
     options.sentence = () => sentence(options.leftModel, options.rightModel);
     options.onModelUpdate = onModelUpdate;
     options.showPivotTable = () => options.leftModel.mode === Mode.MANY && options.rightModel.mode === Mode.MANY;
-    options.showLeftColumn = () => options.columnPosition === Position.LEFT || options.showPivotTable();
-    options.showRightColumn = () => options.columnPosition === Position.RIGHT || options.showPivotTable();
+    options.showLeftColumn = () => options.columnPosition === Position.LEFT && !options.showPivotTable();
+    options.showRightColumn = () => options.columnPosition === Position.RIGHT && !options.showPivotTable();
     options.hasOrHave = () => options.leftModel.mode === Mode.ONE ? 'has' : 'have';
 
     onModelUpdate();
@@ -36,6 +36,9 @@ function modifyOptions(options) {
     function onModelUpdate(){
         options.title = options.rightModel.label();
         options.pivotTable = getPivotTableName();
+
+        options.rightModel.updateNaming();
+        options.rightModel.updateColumn();
     }
 
     function getPivotTableName(){

@@ -28,6 +28,12 @@
                     <label>Column</label>
                     <input type="text" class="form-control" placeholder="Column" ng-model="options.leftModel.column">
                 </div>
+                <div class="input-group" ng-show="options.showPivotTable()">
+                    <span class="input-group-addon">
+                        <span ng-bind="options.pivotTable"></span>.
+                    </span>
+                    <input type="text" class="form-control" placeholder="Column" ng-model="options.leftModel.column">
+                </div>
                 <!-- Column Name -->
             </td>
             <!-- Left Model -->
@@ -50,6 +56,12 @@
                 <!-- Column Name -->
                 <div class="form-group" ng-show="options.showRightColumn()">
                     <label>Column</label>
+                    <input type="text" class="form-control" placeholder="Column" ng-model="options.rightModel.column">
+                </div>
+                <div class="input-group" ng-show="options.showPivotTable()">
+                    <span class="input-group-addon">
+                        <span ng-bind="options.pivotTable"></span>.
+                    </span>
                     <input type="text" class="form-control" placeholder="Column" ng-model="options.rightModel.column">
                 </div>
                 <!-- Column Name -->
