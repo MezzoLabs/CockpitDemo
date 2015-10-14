@@ -45,6 +45,23 @@
 
         <hr>
 
+        <label>Validation Rules</label>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="e.g. required" ng-model="vm.modelBuilder.validationRule">
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="vm.modelBuilder.addValidationRule()" ng-disabled="!vm.modelBuilder.validationRule">
+                    <span class="ion-plus"></span>
+                </button>
+            </span>
+        </div>
+        <ul>
+            <li ng-repeat="rule in vm.modelBuilder.selectedField.options.validationRules">
+                <a href="" ng-bind="rule" ng-click="vm.modelBuilder.removeValidationRule(rule)"></a>
+            </li>
+        </ul>
+
+        <hr>
+
         <button type="button" class="btn btn-danger btn-block" ng-click="vm.modelBuilder.deleteField(vm.modelBuilder.selectedField)">
             <span class="ion-close pull-right"></span>
             Delete field

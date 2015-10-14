@@ -17,7 +17,9 @@ class ModelBuilder {
         var field = {
             id: this.uid(),
             name: name,
-            options: {},
+            options: {
+                validationRules: []
+            },
             mainDirective: 'mezzo-' + name,
             optionsDirective: 'mezzo-' + name + '-options'
         };
@@ -47,6 +49,41 @@ class ModelBuilder {
         this.selectedField = field;
 
         this.componentService.setOptions(field.options);
+    }
+
+    addValidationRule(){
+        var rule = this.validationRule.toLowerCase();
+
+        if(!rule || rule.length === 0 || this.hasValidationRule(rule)){
+            return false;
+        }
+
+        this.validationRule = '';
+
+        this.selectedField.options.validationRules.push(rule);
+    }
+
+    removeValidationRule(validationRule){
+        var rules = this.selectedField.options.validationRules;
+
+        for(var i = 0; i < rules.length; i++){
+            if(rules[i] === validationRule){
+                rules.splice(i, 1);
+                return;
+            }
+        }
+    }
+
+    hasValidationRule(validationRule){
+        var rules = this.selectedField.options.validationRules;
+
+        for(var i = 0; i < rules.length; i++){
+            if(rules[i] === validationRule){
+                return true;
+            }
+        }
+
+        return false;
     }
 
 }
