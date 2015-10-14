@@ -28,11 +28,14 @@
                     <label>Column</label>
                     <input type="text" class="form-control" placeholder="Column" ng-model="options.leftModel.column">
                 </div>
-                <div class="input-group" ng-show="options.showPivotTable()">
-                    <span class="input-group-addon">
-                        <span ng-bind="options.pivotTable"></span>.
-                    </span>
-                    <input type="text" class="form-control" placeholder="Column" ng-model="options.leftModel.column">
+                <div ng-show="options.showPivotTable()">
+                    <label>Column</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <span ng-bind="options.pivotTable"></span>.
+                        </span>
+                        <input type="text" class="form-control" placeholder="Column" ng-model="options.leftModel.column">
+                    </div>
                 </div>
                 <!-- Column Name -->
             </td>
@@ -58,11 +61,14 @@
                     <label>Column</label>
                     <input type="text" class="form-control" placeholder="Column" ng-model="options.rightModel.column">
                 </div>
-                <div class="input-group" ng-show="options.showPivotTable()">
-                    <span class="input-group-addon">
-                        <span ng-bind="options.pivotTable"></span>.
-                    </span>
-                    <input type="text" class="form-control" placeholder="Column" ng-model="options.rightModel.column">
+                <div ng-show="options.showPivotTable()">
+                    <label>Column</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <span ng-bind="options.pivotTable"></span>.
+                        </span>
+                        <input type="text" class="form-control" placeholder="Column" ng-model="options.rightModel.column">
+                    </div>
                 </div>
                 <!-- Column Name -->
             </td>
