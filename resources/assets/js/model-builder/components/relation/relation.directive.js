@@ -1,69 +1,39 @@
 import Component from '../Component';
+import Model from './Model';
+import Mode from './Mode';
+import sentence from './sentence';
+
+const Position = {
+    LEFT: 0,
+    RIGHT: 1
+};
 
 module.exports = new Component('mezzoRelation', 'relation/relation.html', modifyOptions);
 
 function modifyOptions(options) {
-    options.title = 'Title';
-    options.leftMode = '1';
-    options.rightMode = '1';
-    options.leftModel = { id: 0, name: 'Tutorial' };
     options.models = [
-        { id: 1, name: 'User' },
-        { id: 2, name: 'Category' }
+        new Model(1, 'User'),
+        new Model(2, 'Category')
     ];
+    options.leftModel = new Model(0, 'Tutorial');
     options.rightModel = options.models[0];
-    options.title = options.rightModel.name;
-    options.columnPosition = 'left';
-    options.pivotTable = getPivotTableName();
+    options.title = null;
+    options.columnPosition = Position.LEFT;
+    options.pivotTable = null;
+    options.Mode = Mode;
 
-    options.getModelLabel = getModelLabel;
-    options.sentence = sentence;
-    options.updateTitle = updateTitle;
-    options.showPivotTable = showPivotTable;
-    options.showLeftColumn = showLeftColumn;
-    options.showRightColumn = showRightColumn;
+    options.sentence = () => sentence(options.leftModel, options.rightModel);
+    options.onModelUpdate = onModelUpdate;
+    options.showPivotTable = () => options.leftModel.mode === Mode.MANY && options.rightModel.mode === Mode.MANY;
+    options.showLeftColumn = () => options.columnPosition === Position.LEFT || options.showPivotTable();
+    options.showRightColumn = () => options.columnPosition === Position.RIGHT || options.showPivotTable();
+    options.hasOrHave = () => options.leftModel.mode === Mode.ONE ? 'has' : 'have';
 
-    function getModelLabel(model, mode) {
-        switch (mode) {
-            case '1':
-                return model.name;
-            case 'n':
-                return pluralize(model.name);
-            default:
-                return model.name;
-        }
-    }
+    onModelUpdate();
 
-    function sentence() {
-        var sentence = [];
-
-        if (options.leftMode === '1') {
-            sentence.push('One');
-            sentence.push(options.leftModel.name);
-            sentence.push('has');
-        } else {
-            sentence.push('Many');
-            sentence.push(pluralize(options.leftModel.name));
-            sentence.push('have');
-        }
-
-        if (options.rightMode === '1') {
-            sentence.push('one');
-            sentence.push(options.rightModel.name);
-        } else {
-            sentence.push('many');
-            sentence.push(pluralize(options.rightModel.name));
-        }
-
-        return sentence.join(' ');
-    }
-
-    function updateTitle(){
-        options.title = getModelLabel(options.rightModel, options.rightMode);
-    }
-
-    function showPivotTable(){
-        return options.leftMode === 'n' && options.rightMode === 'n';
+    function onModelUpdate(){
+        options.title = options.rightModel.label();
+        options.pivotTable = getPivotTableName();
     }
 
     function getPivotTableName(){
@@ -81,13 +51,5 @@ function modifyOptions(options) {
         });
 
         return sortedNames.join('_');
-    }
-
-    function showLeftColumn(){
-        return options.columnPosition === 'left' || options.showPivotTable();
-    }
-
-    function showRightColumn(){
-        return options.columnPosition === 'right' || options.showPivotTable();
     }
 }
