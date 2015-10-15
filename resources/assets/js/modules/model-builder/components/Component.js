@@ -11,7 +11,7 @@ function directive(templateUrl, modifyOptions){
     return /*@ngInject*/ function inject(componentService){
         return {
             restrict: 'E',
-            templateUrl: 'model-builder/components/' + templateUrl,
+            templateUrl: 'modules/model-builder/components/' + templateUrl,
             link
         };
 

@@ -27,3 +27,7 @@ Route::get('/cockpit/models', function () {
 Route::get('/cockpit/panels', function () {
     return view('layouts.cockpit');
 });
+
+Route::get('/cockpit/files', function () {
+    return view('layouts.cockpit');
+});

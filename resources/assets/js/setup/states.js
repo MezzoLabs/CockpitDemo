@@ -5,11 +5,11 @@ export default [
             url: '/cockpit/pages',
             views: {
                 aside: {
-                    templateUrl: 'pages/aside.html',
+                    templateUrl: 'modules/pages/aside.html',
                     controller: 'PagesAsideController'
                 },
                 main: {
-                    templateUrl: 'pages/main.html',
+                    templateUrl: 'modules/pages/main.html',
                     controller: 'PagesMainController'
                 }
             }
@@ -20,11 +20,11 @@ export default [
             url: '/cockpit/models',
             views: {
                 aside: {
-                    templateUrl: 'model-builder/aside.html',
+                    templateUrl: 'modules/model-builder/aside.html',
                     controller: 'ModelBuilderController as vm'
                 },
                 main: {
-                    templateUrl: 'model-builder/main.html',
+                    templateUrl: 'modules/model-builder/main.html',
                     controller: 'ModelBuilderController as vm'
                 }
             }
@@ -35,7 +35,22 @@ export default [
             url: '/cockpit/panels',
             views: {
                 main: {
-                    templateUrl: 'panels/panels.html'
+                    templateUrl: 'modules/panels/panels.html'
+                }
+            }
+        }
+    }, {
+        name: 'files',
+        route: {
+            url: '/cockpit/files',
+            views: {
+                aside: {
+                    templateUrl: 'modules/files/aside.html',
+                    controller: 'FilesAsideController as vm'
+                },
+                main: {
+                    templateUrl: 'modules/files/main.html',
+                    controller: 'FilesMainController as vm'
                 }
             }
         }
