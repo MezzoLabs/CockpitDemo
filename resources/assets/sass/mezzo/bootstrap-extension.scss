@@ -39,4 +39,8 @@ label{
   color: $brand-success;
 }
 
+.nav-pills li a {
+  border-radius: 0;
+}
+
 textarea { resize:vertical; }
