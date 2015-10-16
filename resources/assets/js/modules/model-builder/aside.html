@@ -47,7 +47,7 @@
 
         <label>Validation Rules</label>
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="e.g. required" ng-model="vm.modelBuilder.validationRule">
+            <input type="text" class="form-control" placeholder="e.g. required" ng-model="vm.modelBuilder.validationRule" mezzo-enter="vm.modelBuilder.addValidationRule()">
             <span class="input-group-btn">
                 <button type="button" class="btn btn-default" ng-click="vm.modelBuilder.addValidationRule()" ng-disabled="!vm.modelBuilder.validationRule">
                     <span class="ion-plus"></span>
