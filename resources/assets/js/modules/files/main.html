@@ -4,9 +4,9 @@
         <div class="modal-content">
             <div class="modal-body">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Folder name" ng-model="vm.folderName">
+                    <input type="text" class="form-control" placeholder="Folder name" ng-model="vm.folderName" mezzo-enter="vm.addFolder(vm.folderName)">
                     <span class="input-group-btn">
-                        <button class="btn btn-success" type="button" ng-click="vm.addFolder(vm.folderName)">
+                        <button class="btn btn-success" type="button" ng-click="vm.addFolder(vm.folderName)" ng-disabled="!vm.folderName">
                             <span class="ion-plus"></span>
                         </button>
                     </span>
@@ -19,7 +19,7 @@
 
 <div class="well" style="margin-bottom: 0">
     <!-- Search -->
-    <input type="search" class="form-control pull-right" style="width: 200px" placeholder="Search">
+    <input type="search" class="form-control pull-right" style="width: 200px" placeholder="Search" ng-model="vm.search">
     <!-- Search -->
     <!-- Upload & Add folder -->
     <div class="btn-group">
@@ -62,22 +62,27 @@
 
 <!-- Folder Navigation -->
 <ol class="breadcrumb" style="margin-bottom: 0">
-    <li ng-repeat="folder in vm.folderHierarchy()" ng-class="{ active: $last }">
-        <a href="" ng-bind="folder.title" ng-click="vm.selectFile(folder)" ng-hide="$last"></a>
-        <span ng-bind="folder.title" ng-show="$last"></span>
+    <li ng-bind="vm.search" ng-if="vm.search"></li>
+    <li ng-bind="vm.category().label" ng-if="vm.showCategoryAsFolderHierarchy()"></li>
+    <li ng-repeat="folder in vm.folderHierarchy()" ng-class="{ active: $last }" ng-if="vm.showFolderHierarchy()">
+        <a href="" ng-bind="folder.title" ng-click="vm.selectFile(folder)" ng-if="!$last"></a>
+        <span ng-bind="folder.title" ng-if="$last"></span>
     </li>
 </ol>
 <!-- Folder Navigation -->
 
 <!-- Files -->
 <table class="table table-hover table-responsive">
-    <tr ng-repeat="file in vm.files">
+    <tr ng-repeat="file in vm.sortedFiles()">
         <td style="width: 20px">
             <span class="ion-ios-folder" ng-show="file.isFolder"></span>
             <span ng-class="file.icon()" ng-hide="file.isFolder"></span>
         </td>
         <td>
             <a href="" style="color: #555555" ng-bind="file.title" ng-click="vm.selectFile(file)"></a>
+        </td>
+        <td>
+            <span ng-show="file.isFolder" ng-bind="vm.items(file)"></span>
         </td>
     </tr>
 </table>
