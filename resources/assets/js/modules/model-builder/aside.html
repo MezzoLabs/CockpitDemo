@@ -56,7 +56,9 @@
         </div>
         <ul>
             <li ng-repeat="rule in vm.modelBuilder.selectedField.options.validationRules">
-                <a href="" ng-bind="rule" ng-click="vm.modelBuilder.removeValidationRule(rule)"></a>
+                <a href="" class="validation-rule" ng-click="vm.modelBuilder.removeValidationRule(rule)">
+                    <span ng-bind="rule"></span> <span class="validation-rule-times">&times;</span>
+                </a>
             </li>
         </ul>
 
