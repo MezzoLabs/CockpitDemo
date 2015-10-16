@@ -1,51 +1,5 @@
-class File {
-
-    constructor(title, name, extension){
-        this.title = title;
-        this.name = name;
-        this.extension = extension;
-        this.type = 'file';
-        this.isFolder = false;
-    }
-
-    icon(){
-        if(this.extension === 'png' || this.extension === 'jpg' || this.extension === 'gif'){
-            return 'ion-image';
-        }
-
-        if(this.extension === 'mp4' || this.extension === 'avi'){
-            return 'ion-ios-videocam';
-        }
-
-        if(this.extension === 'mp3'){
-            return 'ion-music-note';
-        }
-
-        if(this.extension === 'txt' || this.extension === 'md'){
-            return 'ion-document-text';
-        }
-
-        if(this.extension === 'pdf'){
-            return 'ion-printer';
-        }
-
-        return 'ion-document';
-    }
-
-}
-
-class Folder extends File {
-
-    constructor(name, parent = null){
-        super(name, name, '');
-
-        this.parent = parent;
-        this.type = 'folder';
-        this.isFolder = true;
-        this.files = [];
-    }
-
-}
+import File from './File';
+import Folder from './Folder';
 
 class FilesMainController {
 
