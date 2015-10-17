@@ -23,8 +23,8 @@
         <div class="modal-content">
             <div class="modal-body">
                 <script type="text/ng-template" id="node.html">
-                    {{folder.title}}
-                    <ul>
+                    <button type="button" class="btn btn-default btn-xs" ng-bind="folder.title" ng-click="vm.moveTo(folder)"></button>
+                    <ul style="list-style-type: none; padding-left: 20px">
                         <li ng-repeat="folder in folder.files" ng-include="'node.html'" ng-if="folder.isFolder"></li>
                     </ul>
                 </script>
@@ -62,13 +62,13 @@
     <!-- Refresh -->
     <!-- Move & Delete -->
     <div class="btn-group">
-        <button type="button" class="btn btn-default"  data-toggle="modal" data-target="#move-modal">
+        <button type="button" class="btn btn-default"  data-toggle="modal" data-target="#move-modal" ng-disabled="!vm.selected">
             <span style="display: inline-block; width: 20px">
                 <span class="ion-arrow-swap"></span>
             </span>
             <span style="display: inline-block">Move</span>
         </button>
-        <button type="button" class="btn btn-default" ng-click="vm.deleteFiles()" ng-disabled="!vm.canDelete()">
+        <button type="button" class="btn btn-default" ng-click="vm.deleteFiles()" ng-disabled="!vm.selected">
             <span style="display: inline-block; width: 20px">
                 <span class="ion-close"></span>
             </span>

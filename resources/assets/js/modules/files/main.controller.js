@@ -34,13 +34,7 @@ class FilesMainController {
             var folder = files[folderIndex];
             var dragged = files[draggedIndex];
 
-            this.deleteFile(dragged);
-
-            if(dragged.isFolder){
-                dragged.parent = folder;
-            }
-
-            folder.files.push(dragged);
+            this.moveFile(dragged, folder);
             this.$scope.$apply();
         };
     }
@@ -92,7 +86,7 @@ class FilesMainController {
         var folder = new Folder(name, this.folder);
 
         this.folder.files.push(folder);
-        $('div.modal').modal('hide');
+        $('#add-folder-modal').modal('hide');
     }
 
     getFiles(){
@@ -193,6 +187,7 @@ class FilesMainController {
                 }
 
                 this.deleteFile(file);
+                this.$scope.$apply();
             });
         }
     }
@@ -201,15 +196,26 @@ class FilesMainController {
         for(var i = 0; i < this.files.length; i++){
             if(file === this.files[i]){
                 this.files.splice(i, 1);
-                this.$scope.$apply();
 
                 return;
             }
         }
     }
 
-    canDelete(){
-        return this.selected;
+    moveTo(folder){
+        this.moveFile(this.selected, folder);
+        $('#move-modal').modal('hide');
+        this.enterFolder(folder);
+    }
+
+    moveFile(file, folder){
+        this.deleteFile(file);
+
+        if(file.isFolder){
+            file.parent = folder;
+        }
+
+        folder.files.push(file);
     }
 
 }
