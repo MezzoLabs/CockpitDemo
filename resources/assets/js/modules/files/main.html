@@ -2,6 +2,9 @@
 <div id="add-folder-modal" class="modal fade">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Add a new folder</h4>
+            </div>
             <div class="modal-body">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Folder name" ng-model="vm.folderName" mezzo-enter="vm.addFolder(vm.folderName)">
@@ -20,7 +23,10 @@
 <!-- Move Modal -->
 <div id="move-modal" class="modal fade">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content modal-sm">
+            <div class="modal-header">
+                <h4 class="modal-title">Move {{vm.selected.title}} to...</h4>
+            </div>
             <div class="modal-body">
                 <script type="text/ng-template" id="node.html">
                     <button type="button" class="btn btn-default btn-xs" ng-bind="folder.title" ng-click="vm.moveTo(folder)"></button>
