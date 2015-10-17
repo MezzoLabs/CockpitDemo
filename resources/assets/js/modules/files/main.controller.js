@@ -170,9 +170,9 @@ class FilesMainController {
     }
 
     deleteFiles(){
-        if(this.canDelete()){
-            var file = this.selected;
+        var file = this.selected;
 
+        if(file) {
             swal({
                 title: 'Sind Sie sicher?',
                 text: 'Die folgenden Dateien werden unwiderruflich gelöscht: ' + file.title,
@@ -182,9 +182,11 @@ class FilesMainController {
                 confirmButtonColor: '#fb503b',
                 cancelButtonText: 'Abbrechen'
             }, confirmed => {
-                if(!confirmed){
+                if (!confirmed) {
                     return;
                 }
+
+                this.selected = null;
 
                 this.deleteFile(file);
                 this.$scope.$apply();
