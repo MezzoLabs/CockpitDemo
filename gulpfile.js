@@ -16,4 +16,6 @@ elixir(function(mix) {
     blueprint(function modify(draft){
         draft.elixir = mix;
     });
+
+    mix.browserSync();
 });
