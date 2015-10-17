@@ -12,6 +12,7 @@
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link href="/bower/x-editable/dist/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
+        <link href="/bower/sweetalert2/dist/sweetalert2.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.gridster/0.5.6/jquery.gridster.min.css" rel="stylesheet">
         <link href="/bower/chosen/chosen.min.css" rel="stylesheet">
         <link href="/css/app.css" rel='stylesheet' type="text/css" >
@@ -39,8 +40,10 @@
         <script src="/bower/angular/angular.min.js"></script>
         <script src="/bower/angular-ui-router/release/angular-ui-router.min.js"></script>
         <script src="/bower/angular-sortable-view/src/angular-sortable-view.min.js"></script>
+        <script src="/bower/angular-dragdrop/src/angular-dragdrop.min.js"></script>
         <script src="/bower/chosen/chosen.jquery.min.js"></script>
         <script src="/bower/pluralize/pluralize.js"></script>
+        <script src="/bower/sweetalert2/dist/sweetalert2.min.js"></script>
         <script src="/js/templates.js"></script>
         <script src="/js/app.js"></script>
         <!-- JavaScript -->

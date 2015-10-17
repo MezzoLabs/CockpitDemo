@@ -3,9 +3,11 @@ import Folder from './Folder';
 
 class FilesMainController {
 
-    /*@ngInject*/ constructor(fileManager){
+    /*@ngInject*/ constructor($scope, fileManager){
+        this.$scope = $scope;
         this.fileManager = fileManager;
 
+        this.selected = null;
         this.library = new Folder('Library');
         var folder1 = new Folder('folder1', this.library);
         var folder2 = new Folder('folder2', this.library);
@@ -27,6 +29,16 @@ class FilesMainController {
     }
 
     selectFile(file){
+        if(file === this.selected){
+            this.selected = null;
+
+            return;
+        }
+
+        this.selected = file;
+    }
+
+    enterFolder(file){
         if(file.isFolder){
             this.folder = file;
             this.files = file.files;
@@ -91,14 +103,15 @@ class FilesMainController {
     searchFiles(){
         var files = this.allFiles();
         var found = [];
+        var lowerSearch = this.search.toLowerCase();
 
         files.forEach(file => {
-           if(file.title.indexOf(this.search) !== -1){
+           if(file.title.toLowerCase().indexOf(lowerSearch) !== -1){
                found.push(file);
            }
         });
 
-        return files;
+        return found;
     }
 
     sortedFiles(){
@@ -143,6 +156,39 @@ class FilesMainController {
 
     category(){
         return this.fileManager.category;
+    }
+
+    deleteFiles(){
+        if(this.canDelete()){
+            var file = this.selected;
+
+            swal({
+                title: 'Sind Sie sicher?',
+                text: 'Die folgenden Dateien werden unwiderruflich gelöscht: ' + file.title,
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Ja, Dateien löschen!',
+                confirmButtonColor: '#fb503b',
+                cancelButtonText: 'Abbrechen'
+            }, confirmed => {
+                if(!confirmed){
+                    return;
+                }
+
+                for(var i = 0; i < this.files.length; i++){
+                    if(file === this.files[i]){
+                        this.files.splice(i, 1);
+                        this.$scope.$apply();
+
+                        return;
+                    }
+                }
+            });
+        }
+    }
+
+    canDelete(){
+        return this.selected;
     }
 
 }
