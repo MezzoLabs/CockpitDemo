@@ -8,6 +8,11 @@ class FileManagerService {
 
     constructor(){
         this.category = null;
+        this.onDrop = null;
+    }
+
+    drop(droppable, draggable){
+        this.onDrop(droppable, draggable);
     }
 
 }

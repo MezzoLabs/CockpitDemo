@@ -91,20 +91,25 @@
 
 <!-- Files -->
 <table class="table table-hover table-responsive">
-    <tr ng-repeat="file in vm.sortedFiles()"
-        ng-click="vm.selectFile(file)"
-        ng-class="{ danger: file === vm.selected }">
-        <td style="width: 20px">
-            <span class="ion-ios-folder" ng-show="file.isFolder"></span>
-            <span ng-class="file.icon()" ng-hide="file.isFolder"></span>
-        </td>
-        <td>
-            <a href="" style="color: #555555" ng-bind="file.title" ng-click="vm.enterFolder(file)" ng-show="file.isFolder"></a>
-            <span ng-bind="file.title" ng-hide="file.isFolder"></span>
-        </td>
-        <td>
-            <span ng-show="file.isFolder" ng-bind="vm.items(file)"></span>
-        </td>
-    </tr>
+    <tbody>
+        <tr ng-repeat="file in vm.sortedFiles()"
+            ng-click="vm.selectFile(file)"
+            ng-class="{ danger: file === vm.selected }"
+            mezzo-draggable
+            mezzo-droppable="{{file.isFolder}}"
+            data-index="{{$index}}">
+            <td style="width: 20px">
+                <span class="ion-ios-folder" ng-show="file.isFolder"></span>
+                <span ng-class="file.icon()" ng-hide="file.isFolder"></span>
+            </td>
+            <td>
+                <a href="" style="color: #555555" ng-bind="file.title" ng-click="vm.enterFolder(file)" ng-show="file.isFolder"></a>
+                <span ng-bind="file.title" ng-hide="file.isFolder"></span>
+            </td>
+            <td>
+                <span ng-show="file.isFolder" ng-bind="vm.items(file)"></span>
+            </td>
+        </tr>
+    </tbody>
 </table>
 <!-- Files -->

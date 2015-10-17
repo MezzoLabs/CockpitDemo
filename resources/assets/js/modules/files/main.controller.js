@@ -26,6 +26,23 @@ class FilesMainController {
 
         this.folder = this.library;
         this.files = this.library.files;
+
+        fileManager.onDrop = (droppable, draggable) => {
+            var files = this.sortedFiles();
+            var folderIndex = $(droppable).data('index');
+            var draggedIndex = $(draggable).data('index');
+            var folder = files[folderIndex];
+            var dragged = files[draggedIndex];
+
+            this.deleteFile(dragged);
+
+            if(dragged.isFolder){
+                dragged.parent = folder;
+            }
+
+            folder.files.push(dragged);
+            this.$scope.$apply();
+        };
     }
 
     selectFile(file){
@@ -175,15 +192,19 @@ class FilesMainController {
                     return;
                 }
 
-                for(var i = 0; i < this.files.length; i++){
-                    if(file === this.files[i]){
-                        this.files.splice(i, 1);
-                        this.$scope.$apply();
-
-                        return;
-                    }
-                }
+                this.deleteFile(file);
             });
+        }
+    }
+
+    deleteFile(file){
+        for(var i = 0; i < this.files.length; i++){
+            if(file === this.files[i]){
+                this.files.splice(i, 1);
+                this.$scope.$apply();
+
+                return;
+            }
         }
     }
 
