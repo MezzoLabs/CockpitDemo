@@ -220,6 +220,10 @@ class FilesMainController {
         folder.files.push(file);
     }
 
+    upload(files){
+        // TODO: implement upload
+    }
+
 }
 
 export default { name: 'FilesMainController', controller: FilesMainController };

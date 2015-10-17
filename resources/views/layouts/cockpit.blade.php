@@ -41,6 +41,7 @@
         <script src="/bower/angular/angular.min.js"></script>
         <script src="/bower/angular-ui-router/release/angular-ui-router.min.js"></script>
         <script src="/bower/angular-sortable-view/src/angular-sortable-view.min.js"></script>
+        <script src="/bower/ng-file-upload/ng-file-upload.min.js"></script>
         <script src="/bower/chosen/chosen.jquery.min.js"></script>
         <script src="/bower/pluralize/pluralize.js"></script>
         <script src="/bower/sweetalert2/dist/sweetalert2.min.js"></script>
