@@ -91,7 +91,9 @@
 
 <!-- Files -->
 <table class="table table-hover table-responsive">
-    <tr ng-repeat="file in vm.sortedFiles()" ng-click="vm.selectFile(file)" ng-class="{ danger: file === vm.selected }">
+    <tr ng-repeat="file in vm.sortedFiles()"
+        ng-click="vm.selectFile(file)"
+        ng-class="{ danger: file === vm.selected }">
         <td style="width: 20px">
             <span class="ion-ios-folder" ng-show="file.isFolder"></span>
             <span ng-class="file.icon()" ng-hide="file.isFolder"></span>

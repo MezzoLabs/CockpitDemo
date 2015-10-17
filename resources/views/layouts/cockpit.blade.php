@@ -33,6 +33,7 @@
 
         <!-- JavaScript -->
         <script src="/bower/jquery/dist/jquery.min.js"></script>
+        <script src="/bower/jquery-ui/jquery-ui.min.js"></script>
         <script src="/bower/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
         <script src="/bower/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.js"></script>
         <script src="/bower/select2/dist/js/select2.js"></script>
@@ -40,7 +41,6 @@
         <script src="/bower/angular/angular.min.js"></script>
         <script src="/bower/angular-ui-router/release/angular-ui-router.min.js"></script>
         <script src="/bower/angular-sortable-view/src/angular-sortable-view.min.js"></script>
-        <script src="/bower/angular-dragdrop/src/angular-dragdrop.min.js"></script>
         <script src="/bower/chosen/chosen.jquery.min.js"></script>
         <script src="/bower/pluralize/pluralize.js"></script>
         <script src="/bower/sweetalert2/dist/sweetalert2.min.js"></script>

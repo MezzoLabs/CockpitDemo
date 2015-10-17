@@ -21,8 +21,7 @@
     "jstree-bootstrap-theme": "~1.0.1",
     "chosen": "~1.4.2",
     "pluralize": "~1.2.1",
-    "sweetalert2": "~0.2.3",
-    "angular-dragdrop": "~1.0.12"
+    "sweetalert2": "~0.2.3"
   },
   "ignore": [
     "**/.*",
